@@ -10,6 +10,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Run a one-line script
-      run: '(curl -s -L https://tim.dev/install_ios_oss_ci | bash -s arg1 arg2) && bundle exec fastlane test'
+      run: xcodebuild -scheme ZippyZapTests -project ./ZippyZap.xcodeproj clean build test
       env:
         TEST_SCHEME: "ZippyZapTests"
