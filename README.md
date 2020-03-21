@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/pixelglow/ZippyZap.svg)](https://travis-ci.org/pixelglow/ZippyZap)
+[![CI](https://github.com/TimOliver/ZippyZap/workflows/CI/badge.svg)](https://github.com/TimOliver/ZippyZap/actions?query=workflow%3ACI)
 
 **ZippyZap** is a zip file I/O library for Mac OS X and iOS.
 
