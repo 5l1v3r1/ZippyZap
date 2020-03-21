@@ -1,4 +1,0 @@
-language: objective-c
-osx_image: xcode7
-xcode_project: ZippyZap.xcodeproj
-xcode_scheme: ZippyZap (OS X Static Library)
