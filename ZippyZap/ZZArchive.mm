@@ -3,7 +3,7 @@
 //  ZippyZap
 //
 //  Created by Glen Low on 25/09/12.
-//  Copyright (c) 2012, Pixelglow Software. All rights reserved.
+//  Copyright (c) 2012-2020, Pixelglow Software. All rights reserved.
 //
 
 #include <algorithm>

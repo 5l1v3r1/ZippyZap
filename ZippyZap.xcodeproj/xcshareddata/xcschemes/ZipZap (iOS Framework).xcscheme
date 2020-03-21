@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D87BA1F71B3D6DEA00ED7EB3"
-               BuildableName = "ZipZap.framework"
+               BuildableName = "ZippyZap.framework"
                BlueprintName = "ZippyZap (iOS Framework)"
                ReferencedContainer = "container:ZippyZap.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D87BA1F71B3D6DEA00ED7EB3"
-            BuildableName = "ZipZap.framework"
+            BuildableName = "ZippyZap.framework"
             BlueprintName = "ZippyZap (iOS Framework)"
             ReferencedContainer = "container:ZippyZap.xcodeproj">
          </BuildableReference>
@@ -60,7 +60,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D87BA1F71B3D6DEA00ED7EB3"
-            BuildableName = "ZipZap.framework"
+            BuildableName = "ZippyZap.framework"
             BlueprintName = "ZippyZap (iOS Framework)"
             ReferencedContainer = "container:ZippyZap.xcodeproj">
          </BuildableReference>
