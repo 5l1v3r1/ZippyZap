@@ -9,7 +9,5 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
+    - name: Run unit tests from XcodeBuild
       run: xcodebuild -scheme ZippyZapTests -project ./ZippyZap.xcodeproj clean build test
-      env:
-        TEST_SCHEME: "ZippyZapTests"
