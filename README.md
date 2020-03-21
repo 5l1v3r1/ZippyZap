@@ -13,7 +13,7 @@ Install
 
 As an independent project:
 
-* In the Terminal, run `git clone https://github.com/pixelglow/ZippyZap.git`.
+* In the Terminal, run `git clone https://github.com/TimOliver/ZippyZap.git`.
 * Within the *ZippyZap* directory, open the *ZippyZap.xcodeproj* Xcode project.
 * In the Xcode project, select either the *ZippyZap (iOS Framework)*, *ZippyZap (iOS Static Library)*, *ZippyZap (OS X Framework)* or *ZippyZap (OS X Static Library)*  scheme from the drop down.
 * You can now build, test (Mac OS X only) or analyze with the selected scheme.
@@ -21,7 +21,7 @@ As an independent project:
 
 As a project integrated with your own workspace:
 
-* In the Terminal, run `cd workspace` then `git submodule add https://github.com/pixelglow/ZippyZap.git`.
+* In the Terminal, run `cd workspace` then `git submodule add https://github.com/TimOliver/ZippyZap.git`.
 * In your Xcode workspace, choose the *File > Add Files to "workspace"* menu item, then within the *ZippyZap* directory pick the *ZippyZap.xcodeproj* Xcode project.
 * In any project target that will use *ZippyZap*:
   * In *Build Phases > Link Binary With Libraries*, add the corresponding *libZippyZap.a* and any other library listed in the Require Link section below.
@@ -73,9 +73,9 @@ Updating an existing zip file:
 										   }]]
 						error:nil];
 
-Advanced uses: [Recipes](https://github.com/pixelglow/ZippyZap/wiki/Recipes)
+Advanced uses: [Recipes](https://github.com/TimOliver/ZippyZap/wiki/Recipes)
 
-API references: [References](http://pixelglow.github.io/ZippyZap/api/index.html)
+API references: [References](http://pixelglow.github.io/TimOliver/api/index.html)
 
 Require
 -------
@@ -87,18 +87,8 @@ Require
   * *libz.dylib*
 * **Run**: Mac OS X 10.9 (Mavericks) or iOS 7.0 and later.
 
-Support
--------
-
-* Follow us on Twitter: [@pixelglow](http://twitter.com/pixelglow).
-* Raise an issue on [ZippyZap issues](https://github.com/pixelglow/ZippyZap/issues).
-
 License
 -------
 
 *ZippyZap* is licensed with the BSD license.
 
-Donate
-------
-
-* Tip with [ChangeTip](http://pixelglow.tip.me).
