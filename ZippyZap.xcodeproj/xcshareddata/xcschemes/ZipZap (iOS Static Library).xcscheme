@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D899CFAF162C5EEB00112F49"
-               BuildableName = "libZipZap.a"
+               BuildableName = "libZippyZap.a"
                BlueprintName = "ZippyZap (iOS Static Library)"
                ReferencedContainer = "container:ZippyZap.xcodeproj">
             </BuildableReference>
@@ -44,7 +44,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D899CFAF162C5EEB00112F49"
-            BuildableName = "libZipZap.a"
+            BuildableName = "libZippyZap.a"
             BlueprintName = "ZippyZap (iOS Static Library)"
             ReferencedContainer = "container:ZippyZap.xcodeproj">
          </BuildableReference>

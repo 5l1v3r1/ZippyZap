@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D899CF81162C5EC100112F49"
-               BuildableName = "libZipZap.a"
+               BuildableName = "libZippyZap.a"
                BlueprintName = "ZippyZap (OS X Static Library)"
                ReferencedContainer = "container:ZippyZap.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D899CF95162C5EC100112F49"
-               BuildableName = "ZipZapTests.xctest"
+               BuildableName = "ZippyZapTests.xctest"
                BlueprintName = "ZippyZapTests"
                ReferencedContainer = "container:ZippyZap.xcodeproj">
             </BuildableReference>
@@ -54,7 +54,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D899CF81162C5EC100112F49"
-            BuildableName = "libZipZap.a"
+            BuildableName = "libZippyZap.a"
             BlueprintName = "ZippyZap (OS X Static Library)"
             ReferencedContainer = "container:ZippyZap.xcodeproj">
          </BuildableReference>
