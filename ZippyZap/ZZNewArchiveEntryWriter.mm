@@ -178,7 +178,7 @@ namespace ZZDataConsumer
 
 - (BOOL)writeLocalFileToChannelOutput:(id<ZZChannelOutput>)channelOutput
 					  withInitialSkip:(uint32_t)initialSkip
-								error:(out NSError **)error
+								error:(__autoreleasing NSError **)error
 {
 	ZZCentralFileHeader* centralFileHeader = [self centralFileHeader];
 	
@@ -196,13 +196,10 @@ namespace ZZDataConsumer
 	{
 		// if any of the blocks don't set the error, ensure we return an error anyway
 		ZZScopeGuard errorChecker(^{
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wblock-capture-autoreleasing"
 									  if (error && !*error)
 										  *error = [NSError errorWithDomain:ZZErrorDomain
 																	   code:ZZBlockFailedWithoutError
 																   userInfo:nil];
-#pragma GCC diagnostic pop
 								  });
 
 		if (_compressionLevel)
