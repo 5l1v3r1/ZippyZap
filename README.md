@@ -6,6 +6,21 @@
 	<a href="https://github.com/TimOliver/ZippyZap/actions?query=workflow%3ACI">
 		<img src="https://github.com/TimOliver/ZippyZap/workflows/CI/badge.svg" alt="CI" />
 	</a>
+	<a href="http://cocoadocs.org/docsets/ZippyZap">
+		<img src="https://img.shields.io/cocoapods/v/ZippyZap.svg?style=flat" alt="Version" />
+	</a>
+	<a href="https://raw.githubusercontent.com/TimOliver/ZippyZap/master/LICENSE">
+		<img src="https://img.shields.io/badge/license-BSD-blue.svg" alt="GitHub License" />
+	</a>
+	<a href="http://cocoadocs.org/docsets/ZippyZap">
+		<img src="https://img.shields.io/cocoapods/p/ZippyZap.svg?style=flat" alt="Platform" />
+	</a>
+	<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M4RKULAVKV7K8">
+		<img src="https://img.shields.io/badge/paypal-donate-blue.svg" alt="PayPal" />
+	</a>
+	<a href="http://twitch.tv/timXD">
+		<img src="https://img.shields.io/badge/twitch-timXD-6441a5.svg" alt="Twitch" />
+	</a>
 </p>
 
 **ZippyZap** is a ZIP compression file I/O library for macOS, iOS/iPadOS, and tvOS.
