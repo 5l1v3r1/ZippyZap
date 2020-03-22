@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2249D7DE24273D6F008BC04D /* simple-test-windows.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2249D7DB24273D6E008BC04D /* simple-test-windows.zip */; };
+		2249D7DF24273D6F008BC04D /* simple-test-winrar.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2249D7DC24273D6F008BC04D /* simple-test-winrar.zip */; };
+		2249D7E024273D6F008BC04D /* simple-test-macos.zip in Resources */ = {isa = PBXBuildFile; fileRef = 2249D7DD24273D6F008BC04D /* simple-test-macos.zip */; };
+		2249D7E3242744A6008BC04D /* 지퍼.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2249D7E1242744A5008BC04D /* 지퍼.txt */; };
+		2249D7E4242744A6008BC04D /* ジッパー.txt in Resources */ = {isa = PBXBuildFile; fileRef = 2249D7E2242744A6008BC04D /* ジッパー.txt */; };
 		5B503930187069E4002B2B12 /* ZZStandardCryptoEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B50392E187069E4002B2B12 /* ZZStandardCryptoEngine.cpp */; };
 		5B503931187069E4002B2B12 /* ZZStandardCryptoEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B50392F187069E4002B2B12 /* ZZStandardCryptoEngine.h */; };
 		5B50393418707C37002B2B12 /* ZZStandardDecryptInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B50393218707C36002B2B12 /* ZZStandardDecryptInputStream.h */; };
@@ -236,6 +241,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2249D7DB24273D6E008BC04D /* simple-test-windows.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "simple-test-windows.zip"; sourceTree = "<group>"; };
+		2249D7DC24273D6F008BC04D /* simple-test-winrar.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "simple-test-winrar.zip"; sourceTree = "<group>"; };
+		2249D7DD24273D6F008BC04D /* simple-test-macos.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "simple-test-macos.zip"; sourceTree = "<group>"; };
+		2249D7E1242744A5008BC04D /* 지퍼.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "지퍼.txt"; sourceTree = "<group>"; };
+		2249D7E2242744A6008BC04D /* ジッパー.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ジッパー.txt"; sourceTree = "<group>"; };
 		5B50392518706368002B2B12 /* ZZConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZConstants.h; sourceTree = "<group>"; };
 		5B50392E187069E4002B2B12 /* ZZStandardCryptoEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZZStandardCryptoEngine.cpp; sourceTree = "<group>"; };
 		5B50392F187069E4002B2B12 /* ZZStandardCryptoEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZStandardCryptoEngine.h; sourceTree = "<group>"; };
@@ -459,7 +469,12 @@
 				D8E366EE188832C0009F3008 /* small-test-encrypted-aes192.zip */,
 				D8E366EF188832C0009F3008 /* small-test-encrypted-aes256.zip */,
 				5BC58CA518745940002FAE04 /* small-test-encrypted-standard.zip */,
+				2249D7DD24273D6F008BC04D /* simple-test-macos.zip */,
+				2249D7DB24273D6E008BC04D /* simple-test-windows.zip */,
+				2249D7DC24273D6F008BC04D /* simple-test-winrar.zip */,
 				D87BA1AF1B3D5B2900ED7EB3 /* 拉链.txt */,
+				2249D7E1242744A5008BC04D /* 지퍼.txt */,
+				2249D7E2242744A6008BC04D /* ジッパー.txt */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -815,9 +830,14 @@
 				D899CFA2162C5EC100112F49 /* InfoPlist.strings in Resources */,
 				D8E366F0188832C0009F3008 /* large-test-encrypted-aes128.zip in Resources */,
 				D8E366F2188832C0009F3008 /* large-test-encrypted-aes256.zip in Resources */,
+				2249D7E4242744A6008BC04D /* ジッパー.txt in Resources */,
 				5BC58CA718745940002FAE04 /* small-test-encrypted-standard.zip in Resources */,
+				2249D7DF24273D6F008BC04D /* simple-test-winrar.zip in Resources */,
 				D87BA1B51B3D5B2900ED7EB3 /* 拉链.txt in Resources */,
+				2249D7E024273D6F008BC04D /* simple-test-macos.zip in Resources */,
 				D8E366F1188832C0009F3008 /* large-test-encrypted-aes192.zip in Resources */,
+				2249D7DE24273D6F008BC04D /* simple-test-windows.zip in Resources */,
+				2249D7E3242744A6008BC04D /* 지퍼.txt in Resources */,
 				D87BA1B01B3D5B2900ED7EB3 /* dog.jpg in Resources */,
 				D8E366F3188832C0009F3008 /* small-test-encrypted-aes128.zip in Resources */,
 				D87BA1B31B3D5B2900ED7EB3 /* lorem-ipsum.txt in Resources */,
@@ -1045,7 +1065,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fno-exceptions",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelglow.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.ZippyZap;
 				PRODUCT_NAME = ZippyZap;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1070,7 +1090,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fno-exceptions",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelglow.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.ZippyZap;
 				PRODUCT_NAME = ZippyZap;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1127,7 +1147,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fno-exceptions",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelglow.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.ZippyZap;
 				PRODUCT_NAME = ZippyZap;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1152,7 +1172,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fno-exceptions",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelglow.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.ZippyZap;
 				PRODUCT_NAME = ZippyZap;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1373,7 +1393,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fno-exceptions",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelglow.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.ZippyZap;
 				PRODUCT_NAME = ZippyZap;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1398,7 +1418,7 @@
 					"$(OTHER_CFLAGS)",
 					"-fno-exceptions",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.pixelglow.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.ZippyZap;
 				PRODUCT_NAME = ZippyZap;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
