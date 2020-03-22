@@ -2,6 +2,12 @@
 	<img src="https://puu.sh/FnwAo/7e6427cb67.png" width="700" align="center" alt="ZippyZap Logo" />
 </p>
 
+<p align="center">
+	<a href="https://github.com/TimOliver/ZippyZap/actions?query=workflow%3ACI">
+		<img src="https://github.com/TimOliver/ZippyZap/workflows/CI/badge.svg" alt="CI" />
+	</a>
+</p>
+
 **ZippyZap** is a ZIP compression file I/O library for macOS, iOS/iPadOS, and tvOS.
 
 It probably goes without saying that ZIP is the most popular compression format in the world. Supported natively by many operating systems, ZIP is completely open, easy to create and consume, and serves as the basis for many other file formats.
