@@ -103,10 +103,12 @@ Write a new ZIP file:
 
 ```objc
 
+// Create a new archive object instance, setting a key to create if missing
 ZZArchive* newArchive = [[ZZArchive alloc] initWithURL:newURL 
 						options:@{ZZOpenOptionsCreateIfMissingKey : @YES} 
 						error:nil];
 
+// Create a new entry and populate it with data
 id dataBlock = ^(NSError** error) {
 			return [@"hello, world" dataUsingEncoding:NSUTF8StringEncoding];
 		};
@@ -114,23 +116,28 @@ ZZArchiveEntry *newEntry = [ZZArchiveEntry archiveEntryWithFileName:@"first.text
 							compress:YES 
 							dataBlock:dataBlock];
 
+// Add the entry to the archive
 [newArchive updateEntries:@[newEntry] error:nil];
 ```
 
 Update an existing ZIP file:
 
 ```objc
+
+// Create a new instance of an archive
 NSURL *zipURL = [NSURL fileURLWithPath:@"/tmp/old.zip"];
 ZZArchive *archive = [ZZArchive archiveWithURL:zipURL error:nil];
 
+// Create a new entry, and populate it with data
+id dataBlock = ^(NSError** error) {
+			return [@"bye, world" dataUsingEncoding:NSUTF8StringEncoding];
+		};
 ZZArchiveEntry *entry = [ZZArchiveEntry archiveEntryWithFileName:@"second.text"
-									  compress:YES
-									 dataBlock:^(NSError** error)
-										   {
-											   return [@"bye, world" dataUsingEncoding:NSUTF8StringEncoding];
-										   }];
+							compress:YES
+							dataBlock:dataBlock];
 
-[archive updateEntries:[oldArchive.entries arrayByAddingObject:entry] error:nil];
+// Append it to the existing entries of the archive
+[archive updateEntries:[archive.entries arrayByAddingObject:entry] error:nil];
 ```
 
 ## License
