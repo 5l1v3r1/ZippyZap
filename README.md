@@ -1,6 +1,6 @@
-<img src="https://puu.sh/FnwAo/7e6427cb67.png" width="700" align="center" alt="ZippyZap Logo" />
-
-[![CI](https://github.com/TimOliver/ZippyZap/workflows/CI/badge.svg)](https://github.com/TimOliver/ZippyZap/actions?query=workflow%3ACI)
+<p align="center">
+	<img src="https://puu.sh/FnwAo/7e6427cb67.png" width="700" align="center" alt="ZippyZap Logo" />
+</p>
 
 **ZippyZap** is a ZIP compression file I/O library for macOS, iOS/iPadOS, and tvOS.
 
