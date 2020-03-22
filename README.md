@@ -85,13 +85,16 @@ Header includes:
 Read an existing ZIP file:
 
 ```objc
+NSURL *archiveURL = [NSURL fileURLWithPath:@"/tmp/archive.zip"];
+
 // Open the ZIP archive
-ZZArchive* archive = [ZZArchive archiveWithURL:[NSURL fileURLWithPath:@"/tmp/archive.zip"] error:nil];
+ZZArchive* archive = [ZZArchive archiveWithURL:archiveURL error:nil];
 	
 // Load the first entry from within the archive
 ZZArchiveEntry* firstArchiveEntry = archive.entries[0];
 	
-NSLog(@"The first entry's uncompressed size is %lu bytes.", (unsigned long)firstArchiveEntry.uncompressedSize);
+NSLog(@"The first entry's uncompressed size is %lu bytes.", 
+		(unsigned long)firstArchiveEntry.uncompressedSize);
 	
 NSLog(@"The first entry's data is: %@.", [firstArchiveEntry newDataWithError:nil]);
 ```
@@ -99,13 +102,17 @@ NSLog(@"The first entry's data is: %@.", [firstArchiveEntry newDataWithError:nil
 Write a new ZIP file:
 
 ```objc
-NSURL *newURL = [NSURL fileURLWithPath:@"/tmp/new.zip"];
-ZZArchive* newArchive = [[ZZArchive alloc] initWithURL:newURL options:@{ZZOpenOptionsCreateIfMissingKey : @YES} error:nil];
 
-ZZArchiveEntry *newEntry = [ZZArchiveEntry archiveEntryWithFileName:@"first.text" compress:YES dataBlock:^(NSError** error)
-															  {
-																  return [@"hello, world" dataUsingEncoding:NSUTF8StringEncoding];
-															  }];
+ZZArchive* newArchive = [[ZZArchive alloc] initWithURL:newURL 
+						options:@{ZZOpenOptionsCreateIfMissingKey : @YES} 
+						error:nil];
+
+id dataBlock = ^(NSError** error) {
+			return [@"hello, world" dataUsingEncoding:NSUTF8StringEncoding];
+		};
+ZZArchiveEntry *newEntry = [ZZArchiveEntry archiveEntryWithFileName:@"first.text" 
+							compress:YES 
+							dataBlock:dataBlock];
 
 [newArchive updateEntries:@[newEntry] error:nil];
 ```
