@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
     s.name     = 'ZippyZap'
     s.version  = '9.0.0'
     s.license  =  { :type => 'BSD', :file => 'LICENSE' }
-    s.summary  = 'A zip file I/O library for iOS, macOS and tvOS'
+    s.summary  = 'A ZIP file I/O library for iOS, macOS and tvOS'
     s.homepage = 'https://github.com/TimOliver/ZippyZap'
     s.authors  = 'Glen Low', 'Tim Oliver'
     
