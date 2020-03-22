@@ -1,94 +1,146 @@
-[![CI](https://github.com/TimOliver/ZippyZap/workflows/CI/badge.svg)](https://github.com/TimOliver/ZippyZap/actions?query=workflow%3ACI)
+<p align="center">
+	<img src="https://puu.sh/FnwAo/7e6427cb67.png" width="700" align="center" alt="ZippyZap Logo" />
+</p>
 
-**ZippyZap** is a zip file I/O library for Mac OS X and iOS.
+<p align="center">
+	<a href="https://github.com/TimOliver/ZippyZap/actions?query=workflow%3ACI">
+		<img src="https://github.com/TimOliver/ZippyZap/workflows/CI/badge.svg" alt="CI" />
+	</a>
+	<a href="http://cocoadocs.org/docsets/ZippyZap">
+		<img src="https://img.shields.io/cocoapods/v/ZippyZap.svg?style=flat" alt="Version" />
+	</a>
+	<a href="https://raw.githubusercontent.com/TimOliver/ZippyZap/master/LICENSE">
+		<img src="https://img.shields.io/badge/license-BSD-blue.svg" alt="GitHub License" />
+	</a>
+	<a href="http://cocoadocs.org/docsets/ZippyZap">
+		<img src="https://img.shields.io/cocoapods/p/ZippyZap.svg?style=flat" alt="Platform" />
+	</a>
+	<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=M4RKULAVKV7K8">
+		<img src="https://img.shields.io/badge/paypal-donate-blue.svg" alt="PayPal" />
+	</a>
+	<a href="http://twitch.tv/timXD">
+		<img src="https://img.shields.io/badge/twitch-timXD-6441a5.svg" alt="Twitch" />
+	</a>
+</p>
 
-The zip file is an ideal container for compound Objective-C documents. Zip files are widely used and well understood. You can randomly access their parts. The format compresses decently and has extensive operating system and tool support. So we want to make this format an even easier choice for you. Thus, the library features:
+**ZippyZap** is a ZIP compression file I/O library for macOS, iOS/iPadOS, and tvOS.
 
-* **Easy-to-use interface**: The public API offers just two classes! Yet you can look through zip files using familiar *NSArray* collections and properties. And you can zip, unzip and rezip zip files through familiar *NSData*, *NSStream* and Image I/O classes.
-* **Efficient implementation**: We've optimized zip file reading and writing to reduce virtual memory pressure and disk file thrashing. Depending on how your compound document is organized, updating a single entry can be faster than writing the same data to a separate file.
-* **File format compatibility**: Since *ZippyZap* closely follows the [zip file format specification](http://www.pkware.com/documents/casestudies/APPNOTE.TXT), it works with most Mac, Linux and Windows zip tools.
+It probably goes without saying that ZIP is the most popular compression format in the world. Supported natively by many operating systems, ZIP is completely open, easy to create and consume, and serves as the basis for many other file formats.
 
-Install
--------
+ZippyZap is a fork of [ZipZap, originally by Glen Low](https://github.com/pixelglow/ZipZap). ZipZap had the goal of being the most comprehensive open source ZIP library for Apple's platforms, adhering to the ZIP standard as closely as possible, and also having a very extensive test suite.
 
-As an independent project:
+Glen's current working circumstances have made it such that he has unable been able to continue working on ZipZap for the last few years. Since I believe that this is by far the best ZIP library available on the platform, I've forked ZipZap into ZippyZap with the goal of continuing to use and refine it for my own upcoming projects.
 
-* In the Terminal, run `git clone https://github.com/TimOliver/ZippyZap.git`.
-* Within the *ZippyZap* directory, open the *ZippyZap.xcodeproj* Xcode project.
-* In the Xcode project, select either the *ZippyZap (iOS Framework)*, *ZippyZap (iOS Static Library)*, *ZippyZap (OS X Framework)* or *ZippyZap (OS X Static Library)*  scheme from the drop down.
-* You can now build, test (Mac OS X only) or analyze with the selected scheme.
-* The built libraries and test cases are in a subdirectory of *~/Library/Developer/Xcode/DerivedData*.
+## Features
 
-As a project integrated with your own workspace:
+* **Easy-to-use interface**: The public API offers just two classes! You can browse through zip files using familiar `NSArray` collections and properties. And you can zip, unzip and re-zip ZIP files through familiar `NSData`, `NSStream` and `ImageIO` classes.
+* **Efficient implementation**: ZIP file reading and writing has been optimised to reduce virtual memory pressure and disk file thrashing. Depending on how your archive is organised, updating a single entry can be faster than writing the same data to a separate file.
+* **File format compatibility**: Since ZippyZap closely follows the [zip file format specification](http://www.pkware.com/documents/casestudies/APPNOTE.TXT), it works with most Mac, Linux and Windows ZIP tools.
 
-* In the Terminal, run `cd workspace` then `git submodule add https://github.com/TimOliver/ZippyZap.git`.
-* In your Xcode workspace, choose the *File > Add Files to "workspace"* menu item, then within the *ZippyZap* directory pick the *ZippyZap.xcodeproj* Xcode project.
+## System Requirements
+
+* **Build**: Xcode 7 and later.
+* **Linking**:
+  * `ApplicationServices.framework` (macOS only)
+  * `ImageIO.framework` (iOS only)
+  * `Foundation.framework`
+  * `libz.dylib`
+* **System**: macOS 10.10 (Yosemite) or iOS 7.0 and later.
+
+## Install
+
+### CocoaPods
+
+Include the following line in your
+
+```
+pod 'ZippyZap' 
+```
+
+### Compile your own copy:
+
+1. [Download the `ZippyZap` repo](https://github.com/TimOliver/ZippyZap/archive/master.zip) to your hard drive and decompress it.
+2. Within the `ZippyZap` directory, open the `ZippyZap.xcodeproj` project in Xcode.
+3. In the Xcode project, select either the *ZippyZap (iOS Framework)*, *ZippyZap (iOS Static Library)*, *ZippyZap (macOS Framework)* or *ZippyZap (macOS Static Library)*  scheme from the drop down.
+4. From the selected scheme, you can build a copy of the framework that you can them embed in your own project.
+5. The built libraries and test cases are located in a subdirectory of `~/Library/Developer/Xcode/DerivedData`.
+
+### Integrate as a project in your Xcode workspace:
+
+* In Terminal, run `cd workspace` then `git submodule add https://github.com/TimOliver/ZippyZap.git`.
+* In your Xcode workspace, choose *File > Add Files to "workspace"*, and then within the *ZippyZap* directory pick the *ZippyZap.xcodeproj* Xcode project.
 * In any project target that will use *ZippyZap*:
   * In *Build Phases > Link Binary With Libraries*, add the corresponding *libZippyZap.a* and any other library listed in the Require Link section below.
   * Under *Build Settings > Search Paths > Header Search Paths*, add *../ZippyZap*.
-* You can now build, test or analyze those project targets.
+* You can now build, test or analyse any of those project targets.
 
-Use
----
+## Usage
 
 Header includes:
 
-	#import <ZippyZap/ZippyZap.h>
+```objc
+#import <ZippyZap/ZippyZap.h>
+```
+
+Read an existing ZIP file:
+
+```objc
+NSURL *archiveURL = [NSURL fileURLWithPath:@"/tmp/archive.zip"];
+
+// Open the ZIP archive
+ZZArchive* archive = [ZZArchive archiveWithURL:archiveURL error:nil];
 	
-Reading an existing zip file:
-
-	ZZArchive* oldArchive = [ZZArchive archiveWithURL:[NSURL fileURLWithPath:@"/tmp/old.zip"]
-	                                            error:nil];
-	ZZArchiveEntry* firstArchiveEntry = oldArchive.entries[0];
-	NSLog(@"The first entry's uncompressed size is %lu bytes.", (unsigned long)firstArchiveEntry.uncompressedSize);
-	NSLog(@"The first entry's data is: %@.", [firstArchiveEntry newDataWithError:nil]);
+// Load the first entry from within the archive
+ZZArchiveEntry* firstArchiveEntry = archive.entries[0];
 	
-Writing a new zip file:
+NSLog(@"The first entry's uncompressed size is %lu bytes.", 
+		(unsigned long)firstArchiveEntry.uncompressedSize);
+	
+NSLog(@"The first entry's data is: %@.", [firstArchiveEntry newDataWithError:nil]);
+```
+	
+Write a new ZIP file:
 
-	ZZArchive* newArchive = [[ZZArchive alloc] initWithURL:[NSURL fileURLWithPath:@"/tmp/new.zip"]
-	                                               options:@{ZZOpenOptionsCreateIfMissingKey : @YES}
-	                                                 error:nil];
-	[newArchive updateEntries:
-						 @[
-						 [ZZArchiveEntry archiveEntryWithFileName:@"first.text"
-														 compress:YES
-														dataBlock:^(NSError** error)
-															  {
-																  return [@"hello, world" dataUsingEncoding:NSUTF8StringEncoding];
-															  }]
-						 ]
-					    error:nil];
+```objc
 
-Updating an existing zip file:
-
-	ZZArchive* oldArchive = [ZZArchive archiveWithURL:[NSURL fileURLWithPath:@"/tmp/old.zip"]
-	                                            error:nil];
-	[oldArchive updateEntries:
-	 [oldArchive.entries arrayByAddingObject:
-	  [ZZArchiveEntry archiveEntryWithFileName:@"second.text"
-									  compress:YES
-									 dataBlock:^(NSError** error)
-										   {
-											   return [@"bye, world" dataUsingEncoding:NSUTF8StringEncoding];
-										   }]]
+// Create a new archive object instance, setting a key to create if missing
+ZZArchive* newArchive = [[ZZArchive alloc] initWithURL:newURL 
+						options:@{ZZOpenOptionsCreateIfMissingKey : @YES} 
 						error:nil];
 
-Advanced uses: [Recipes](https://github.com/TimOliver/ZippyZap/wiki/Recipes)
+// Create a new entry and populate it with data
+id dataBlock = ^(NSError** error) {
+			return [@"hello, world" dataUsingEncoding:NSUTF8StringEncoding];
+		};
+ZZArchiveEntry *newEntry = [ZZArchiveEntry archiveEntryWithFileName:@"first.text" 
+							compress:YES 
+							dataBlock:dataBlock];
 
-API references: [References](http://pixelglow.github.io/TimOliver/api/index.html)
+// Add the entry to the archive
+[newArchive updateEntries:@[newEntry] error:nil];
+```
 
-Require
--------
+Update an existing ZIP file:
 
-* **Build**: Xcode 7 and later.
-* **Link**: Only system libraries; no third-party libraries needed.
-  * *ApplicationServices.framework* (Mac OS X) or *ImageIO.framework* (iOS)
-  * *Foundation.framework*
-  * *libz.dylib*
-* **Run**: Mac OS X 10.9 (Mavericks) or iOS 7.0 and later.
+```objc
 
-License
--------
+// Create a new instance of an archive
+NSURL *zipURL = [NSURL fileURLWithPath:@"/tmp/old.zip"];
+ZZArchive *archive = [ZZArchive archiveWithURL:zipURL error:nil];
 
-*ZippyZap* is licensed with the BSD license.
+// Create a new entry, and populate it with data
+id dataBlock = ^(NSError** error) {
+			return [@"bye, world" dataUsingEncoding:NSUTF8StringEncoding];
+		};
+ZZArchiveEntry *entry = [ZZArchiveEntry archiveEntryWithFileName:@"second.text"
+							compress:YES
+							dataBlock:dataBlock];
+
+// Append it to the existing entries of the archive
+[archive updateEntries:[archive.entries arrayByAddingObject:entry] error:nil];
+```
+
+## License
+
+*ZippyZap* is licensed under the BSD license. Please see the [LICENSE](LICENSE) file.
 

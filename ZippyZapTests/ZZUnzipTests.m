@@ -8,8 +8,6 @@
 
 #include <zlib.h>
 
-#include <ImageIO/ImageIO.h>
-
 #import <ZippyZap/ZippyZap.h>
 
 #import "ZZTasks.h"

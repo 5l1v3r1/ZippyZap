@@ -249,6 +249,7 @@
 		2249D7E2242744A6008BC04D /* ジッパー.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "ジッパー.txt"; sourceTree = "<group>"; };
 		2249D7E524274B37008BC04D /* ZZUnicodeZipTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZUnicodeZipTests.h; sourceTree = "<group>"; };
 		2249D7E624274B37008BC04D /* ZZUnicodeZipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZUnicodeZipTests.m; sourceTree = "<group>"; };
+		2249D7E824279316008BC04D /* ZippyZap.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = ZippyZap.podspec; sourceTree = "<group>"; };
 		5B50392518706368002B2B12 /* ZZConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZConstants.h; sourceTree = "<group>"; };
 		5B50392E187069E4002B2B12 /* ZZStandardCryptoEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ZZStandardCryptoEngine.cpp; sourceTree = "<group>"; };
 		5B50392F187069E4002B2B12 /* ZZStandardCryptoEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZStandardCryptoEngine.h; sourceTree = "<group>"; };
@@ -331,7 +332,6 @@
 		D8B83A8719B7DF9E00CF72B6 /* ZZChannelTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZChannelTests.h; sourceTree = "<group>"; };
 		D8B83A8819B7F7DF00CF72B6 /* ZZDataChannelTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZDataChannelTests.h; sourceTree = "<group>"; };
 		D8B83A8919B7F7DF00CF72B6 /* ZZDataChannelTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZDataChannelTests.m; sourceTree = "<group>"; };
-		D8B83A8D19B8101B00CF72B6 /* zipzap.podspec.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = zipzap.podspec.json; sourceTree = "<group>"; };
 		D8D140D31B423B1100C411B0 /* ZippyZap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ZippyZap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E366EA188832C0009F3008 /* large-test-encrypted-aes128.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "large-test-encrypted-aes128.zip"; sourceTree = "<group>"; };
 		D8E366EB188832C0009F3008 /* large-test-encrypted-aes192.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = "large-test-encrypted-aes192.zip"; sourceTree = "<group>"; };
@@ -499,7 +499,7 @@
 				D899CF83162C5EC100112F49 /* Products */,
 				D8A32673163C2240008606AC /* LICENSE.md */,
 				D8A32627163BFF3D008606AC /* README.md */,
-				D8B83A8D19B8101B00CF72B6 /* zipzap.podspec.json */,
+				2249D7E824279316008BC04D /* ZippyZap.podspec */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -702,9 +702,9 @@
 			productReference = D87BA1F81B3D6DEA00ED7EB3 /* ZippyZap.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		D899CF81162C5EC100112F49 /* ZippyZap (OS X Static Library) */ = {
+		D899CF81162C5EC100112F49 /* ZippyZap (macOS Static Library) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D899CFA6162C5EC100112F49 /* Build configuration list for PBXNativeTarget "ZippyZap (OS X Static Library)" */;
+			buildConfigurationList = D899CFA6162C5EC100112F49 /* Build configuration list for PBXNativeTarget "ZippyZap (macOS Static Library)" */;
 			buildPhases = (
 				D899CF7E162C5EC100112F49 /* Sources */,
 				D899CF7F162C5EC100112F49 /* Frameworks */,
@@ -714,7 +714,7 @@
 			);
 			dependencies = (
 			);
-			name = "ZippyZap (OS X Static Library)";
+			name = "ZippyZap (macOS Static Library)";
 			productName = ZipZap;
 			productReference = D899CF82162C5EC100112F49 /* libZippyZap.a */;
 			productType = "com.apple.product-type.library.static";
@@ -754,9 +754,9 @@
 			productReference = D899CFB0162C5EEB00112F49 /* libZippyZap.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		D8D140D21B423B1100C411B0 /* ZippyZap (OS X Framework) */ = {
+		D8D140D21B423B1100C411B0 /* ZippyZap (macOS Framework) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8D140EA1B423B1100C411B0 /* Build configuration list for PBXNativeTarget "ZippyZap (OS X Framework)" */;
+			buildConfigurationList = D8D140EA1B423B1100C411B0 /* Build configuration list for PBXNativeTarget "ZippyZap (macOS Framework)" */;
 			buildPhases = (
 				D8D140CE1B423B1100C411B0 /* Sources */,
 				D8D140CF1B423B1100C411B0 /* Frameworks */,
@@ -767,7 +767,7 @@
 			);
 			dependencies = (
 			);
-			name = "ZippyZap (OS X Framework)";
+			name = "ZippyZap (macOS Framework)";
 			productName = ZipZap;
 			productReference = D8D140D31B423B1100C411B0 /* ZippyZap.framework */;
 			productType = "com.apple.product-type.framework";
@@ -803,8 +803,8 @@
 			targets = (
 				D87BA1F71B3D6DEA00ED7EB3 /* ZippyZap (iOS Framework) */,
 				D899CFAF162C5EEB00112F49 /* ZippyZap (iOS Static Library) */,
-				D8D140D21B423B1100C411B0 /* ZippyZap (OS X Framework) */,
-				D899CF81162C5EC100112F49 /* ZippyZap (OS X Static Library) */,
+				D8D140D21B423B1100C411B0 /* ZippyZap (macOS Framework) */,
+				D899CF81162C5EC100112F49 /* ZippyZap (macOS Static Library) */,
 				BF8624AB1BB7495200C12EEE /* ZippyZap (tvOS Framework) */,
 				BF8624D11BB74B1F00C12EEE /* ZippyZap (tvOS Static Library) */,
 				D899CF95162C5EC100112F49 /* ZippyZapTests */,
@@ -1036,7 +1036,7 @@
 /* Begin PBXTargetDependency section */
 		D899CF9B162C5EC100112F49 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D899CF81162C5EC100112F49 /* ZippyZap (OS X Static Library) */;
+			target = D899CF81162C5EC100112F49 /* ZippyZap (macOS Static Library) */;
 			targetProxy = D899CF9A162C5EC100112F49 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1470,7 +1470,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D899CFA6162C5EC100112F49 /* Build configuration list for PBXNativeTarget "ZippyZap (OS X Static Library)" */ = {
+		D899CFA6162C5EC100112F49 /* Build configuration list for PBXNativeTarget "ZippyZap (macOS Static Library)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D899CFA7162C5EC100112F49 /* Debug */,
@@ -1497,7 +1497,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8D140EA1B423B1100C411B0 /* Build configuration list for PBXNativeTarget "ZippyZap (OS X Framework)" */ = {
+		D8D140EA1B423B1100C411B0 /* Build configuration list for PBXNativeTarget "ZippyZap (macOS Framework)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8D140E61B423B1100C411B0 /* Debug */,
