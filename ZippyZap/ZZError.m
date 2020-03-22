@@ -8,6 +8,6 @@
 
 #import "ZZError.h"
 
-NSString* const ZZErrorDomain = @"com.pixelglow.ZippyZap";
+NSString* const ZZErrorDomain = @"dev.tim.ZippyZap";
 
 NSString* const ZZEntryIndexKey = @"ZZEntryIndexKey";

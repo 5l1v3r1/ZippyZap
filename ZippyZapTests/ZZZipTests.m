@@ -38,7 +38,7 @@
 
 - (NSError*)someError
 {
-	return [NSError errorWithDomain:@"com.pixelglow.ZippyZap.something" code:99 userInfo:nil];
+	return [NSError errorWithDomain:@"dev.tim.ZippyZap.something" code:99 userInfo:nil];
 }
 
 - (NSData*)dataAtFilePath:(NSString*)filePath
